@@ -1,2 +1,25 @@
 en:
   title: "Coworking Space Booking System"
+  static_pages:
+    about:
+      title: "About"
+      content_about: "%{tutorial} is a %{book} and %{series} to booking Space
+      .This is web for find and share %{tutorial} "
+      lt_space: "Co-Working Space"
+      lt_book: "service"
+      lt_series: "series"
+    contact:
+      title: "Contact"
+      content_contact: "Contact the Co-Working Space Suport about the Co-Working Space at the
+      %{contact}"
+      lt_contact: "Contact Page"
+      lt_tutorial: "Hướng dẫn Ruby on Rails"
+  layouts:
+    header:
+      english: "English"
+      title_logo: "CoWorking Space"
+      signup: "Sign up"
+      login: "Login"
+    footer:
+      title_about: "About"
+      title_contact: "Contact"
