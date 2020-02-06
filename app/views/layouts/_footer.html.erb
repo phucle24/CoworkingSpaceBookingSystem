@@ -3,6 +3,9 @@
     <ul>
       <li><%= link_to t(".title_about"), about_path %></li>
       <li><%= link_to t(".title_contact"), contact_path %></li>
+      <%= link_to Settings.link_facebook do %>
+        <i class='fa fa-facebook' aria-hidden='true'></i>
+      <% end %>
     </ul>
   </nav>
 </footer>

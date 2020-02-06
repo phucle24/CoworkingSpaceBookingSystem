@@ -7,7 +7,8 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.3.7"
 gem "coffee-rails", "~> 4.2"
 gem "config"
-gem "font-awesome-sass", "~> 4.2.0"
+gem "font-awesome-rails"
+gem "font-awesome-sass"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "~> 4.3", ">= 4.3.3"
 gem "mysql2", ">= 0.4.4", "< 0.6.0"
@@ -15,6 +16,7 @@ gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.4", ">= 5.2.4.1"
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
+gem 'bcrypt'
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "uglifier", ">= 1.3.0"
 group :development, :test do

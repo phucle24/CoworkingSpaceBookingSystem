@@ -1,2 +1,19 @@
 vi:
-  title: "He Thong Dat Phong Lam Viec"
+  title: "He thong dat phong lam viec chung"
+  static_pages:
+    home:
+      content: "Trang chu"
+    about:
+      title: "Ve chung toi"
+      content: "Web nay dung de dat phong lam viec chung"
+    contact:
+      title: "Lien he"
+      content: "Lien he voi chung toi qua email va facebooo o duoi footer"
+  layouts:
+    header:
+      title_logo: "CoWorking Space"
+      signup: "Dang ky"
+      login: "Dang Nhap"
+    footer:
+      title_about: "Ve chung toi"
+      title_contact: "Lien he: "
