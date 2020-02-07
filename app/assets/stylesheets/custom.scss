@@ -1,5 +1,7 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 /* Variables Color */
 $logo-color: #ffce1d;
 $logo-color-hover: #fff;
@@ -172,4 +174,7 @@ aside {
 }
 header.navbar-menu {
     background-color: $navbar-menu;
+}
+.fa{
+  color: orange;
 }

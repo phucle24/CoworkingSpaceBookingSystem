@@ -1,5 +1,5 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container"> <%= link_to t(".title_logo"), "#", id: "logo" %>
+    <div class="container"> <%= link_to t(".title_logo"),root_path, id: "logo" %>
         <nav>
             <ul class="nav navbar-nav navbar-left">
             <li>
@@ -14,21 +14,36 @@
             </ul>
         </nav><nav>
             <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-                    <li><%= link_to t(".english") %></li>
+                <li class="btn-group nav-item">
+                    <li>
+                        <%= link_to locale: "en" do %>
+                            <i class='fa fa-globe' aria-hidden='true'></i>EN
+                        <% end %>
+                    </li>
                 </li>
                 <li class="btn-group nav-item">
-                     <li><%= link_to t(".vietnam") %></li>
+                    <li>
+                        <%= link_to locale: "vi" do %>
+                            <i class='fa fa-globe' aria-hidden='true'></i>VI
+                        <% end %>
+                    </li>
                 </li>
                 <li class="btn-group nav-item">
-                     <li><%= link_to t(".signup") %></li>
+                    <li>
+                        <%= link_to do %>
+                            <i class='fa fa-user-plus' aria-hidden='true'></i><%=t('.signup') %>
+                        <% end %>
+                    </li>
                 </li>
-                <li class="dropdown nav-item">
-                    <li><%= link_to t(".login") %></li>
+                <li class="btn-group nav-item">
+                    <li>
+                        <%= link_to do %>
+                            <i class='fa fa-sign-in' aria-hidden='true'></i><%= t('.login') %>
+                        <% end %>
+                    </li>
                 </li>
             </ul>
         </nav>
     </div>
 </div>
-
 </header>
