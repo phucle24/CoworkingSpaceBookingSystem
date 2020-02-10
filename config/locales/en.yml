@@ -18,3 +18,12 @@ en:
     footer:
       title_about: "About"
       title_contact: "Contact: "
+  share:
+    error_messages: "The form contains error"
+  users:
+    user_notexist: "User does not exist"
+    create_success: Welcome to the App!"
+    create_fail: "Sign up failed"
+    new:
+      title: "Signup"
+      btn_create: "Create my account"

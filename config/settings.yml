@@ -1,2 +1,7 @@
 link_space: https://www.google.com
 link_facebook: "https://www.facebook.com"
+name_max: 50
+phone_min: 10
+phone_max: 11
+email_max: 255
+password_min: 6

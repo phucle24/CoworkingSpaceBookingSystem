@@ -1,19 +1,43 @@
 vi:
-  title: "He thong dat phong lam viec chung"
+  helpers:
+    label:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        phone: "Số điện thoại"
+        password_confirmation: "Nhập lại mật khẩu"
+  activerecord:
+    errors:
+      messages:
+        blank: "không được để trống"
+        invalid: "không đúng định dạng"
+        too_short: "quá ngắn"
+        not_a_number: "không phải số"
+  title: "Hệ thống đặt phòng làm việc chung"
   static_pages:
     home:
-      content: "Trang chu"
+      content: "Trang chủ"
     about:
-      title: "Ve chung toi"
-      content: "Web nay dung de dat phong lam viec chung"
+      title: "Về chúng tôi"
+      content: "Web này dùng để đặt phòng làm việc chung"
     contact:
-      title: "Lien he"
-      content: "Lien he voi chung toi qua email va facebooo o duoi footer"
+      title: "Liên hệ"
+      content: "Liên hệ chúng tôi qua facebook và email ở dưới footer"
   layouts:
     header:
       title_logo: "CoWorking Space"
-      signup: "Dang ky"
-      login: "Dang Nhap"
+      signup: "Đăng ký"
+      login: "Đăng nhập"
     footer:
-      title_about: "Ve chung toi"
-      title_contact: "Lien he: "
+      title_about: "Về chúng tôi"
+      title_contact: "Liên hệ: "
+  share:
+    error_messages: "Biểu mẩu có"
+  users:
+    user_notexist: "Tài khoản không tồn tại"
+    create_success: "Chào mừng đến với ứng dụng"
+    create_fail: "Đăng ký thất bại"
+    new:
+      title: "Đăng ký"
+      btn_create: "Đăng ký tài khoản"
