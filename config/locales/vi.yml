@@ -30,18 +30,27 @@ vi:
       signup: "Đăng ký"
       login: "Đăng nhập"
       logout: "Đăng xuất"
+      title_profile: "Thông tin cá nhân"
+      title_setting: "Chỉnh sửa"
+      title_account: "Tài khoản"
     footer:
       title_about: "Về chúng tôi"
       title_contact: "Liên hệ: "
-  share:
-    error_messages: "Biểu mẩu có"
+  shared:
+    error_messages:
+      content_error: "Biểu mẫu này có %{error} lỗi"
   users:
     user_notexist: "Tài khoản không tồn tại"
     create_success: "Chào mừng đến với ứng dụng"
     create_fail: "Đăng ký thất bại"
     btn_create: "Đăng ký tài khoản"
+    update_success: "Cập nhật thành công"
     new:
       title: "Đăng ký"
+      btn_create: "Đăng kí"
+    edit:
+      title: "Chỉnh sửa thông tin"
+      btn_edit: "Lưu thay đổi"
   sessions:
     login_success: "Đăng nhập thành công"
     login_fail: "Đăng nhập thất bại"

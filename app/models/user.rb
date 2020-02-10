@@ -5,7 +5,8 @@ class User < ApplicationRecord
   validates :phone, presence: true,
                     numericality: true,
                     length: {minimum: Settings.phone_min, maximum: Settings.phone_max}
-  validates :password, presence: true, length: {minimum: Settings.password_min}
+  validates :password, presence: true, length: {minimum: Settings.password_min},
+                    allow_nil: true
   validates :email, presence: true, length: {maximum: Settings.email_max},
                     format: {with: VALID_EMAIL_REGEX},
                     uniqueness: {case_sensitive: false}
