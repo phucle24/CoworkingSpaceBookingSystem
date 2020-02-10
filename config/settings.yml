@@ -5,3 +5,4 @@ phone_min: 10
 phone_max: 11
 email_max: 255
 password_min: 6
+remember_me: "1"
