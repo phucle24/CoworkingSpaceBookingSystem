@@ -15,6 +15,7 @@ en:
       title_logo: "CoWorking Space"
       signup: "Sign up"
       login: "Login"
+      logout: "logout"
     footer:
       title_about: "About"
       title_contact: "Contact: "
@@ -24,6 +25,14 @@ en:
     user_notexist: "User does not exist"
     create_success: Welcome to the App!"
     create_fail: "Sign up failed"
+    btn_create: "Create my account"
     new:
       title: "Signup"
-      btn_create: "Create my account"
+  sessions:
+    login_success: "Login success"
+    login_fail: "Login Fail"
+    new:
+      title: "Login"
+      btn_login: "Login"
+      new_user: "New user?"
+      sign_up: "Signup"

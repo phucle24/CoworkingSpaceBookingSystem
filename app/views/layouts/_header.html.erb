@@ -1,49 +1,59 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container"> <%= link_to t(".title_logo"),root_path, id: "logo" %>
-        <nav>
-            <ul class="nav navbar-nav navbar-left">
+  <div class="container"> <%= link_to t(".title_logo"),root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-left">
+      <li>
+         <div class="seach">
+         <form class="form-inline active-cyan-4">
+          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </form>
+         </div>
+      </li>
+      </ul>
+    </nav><nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="btn-group nav-item">
+          <li>
+            <%= link_to locale: "en" do %>
+              <i class="fa fa-globe" aria-hidden="true"></i>EN
+            <% end %>
+          </li>
+        </li>
+        <li class="btn-group nav-item">
+          <li>
+            <%= link_to locale: "vi" do %>
+              <i class="fa fa-globe" aria-hidden="true"></i>VI
+            <% end %>
+          </li>
+        </li>
+        <% if logged_in? %>
+           <li class="btn-group nav-item">
             <li>
-               <div class="seach">
-               <form class="form-inline active-cyan-4">
-                  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                    aria-label="Search">
-                  <i class="fas fa-search" aria-hidden="true"></i>
-                </form>
-               </div>
+              <%= link_to logout_path, method: :delete do %>
+                <i class="fa fa-sign-out" aria-hidden="true"></i><%= t(".logout") %>
+              <% end %>
             </li>
-            </ul>
-        </nav><nav>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="btn-group nav-item">
-                    <li>
-                        <%= link_to locale: "en" do %>
-                            <i class='fa fa-globe' aria-hidden='true'></i>EN
-                        <% end %>
-                    </li>
-                </li>
-                <li class="btn-group nav-item">
-                    <li>
-                        <%= link_to locale: "vi" do %>
-                            <i class='fa fa-globe' aria-hidden='true'></i>VI
-                        <% end %>
-                    </li>
-                </li>
-                <li class="btn-group nav-item">
-                    <li>
-                        <%= link_to signup_path do %>
-                            <i class='fa fa-user-plus' aria-hidden='true'></i><%=t('.signup') %>
-                        <% end %>
-                    </li>
-                </li>
-                <li class="btn-group nav-item">
-                    <li>
-                        <%= link_to do %>
-                            <i class='fa fa-sign-in' aria-hidden='true'></i><%= t('.login') %>
-                        <% end %>
-                    </li>
-                </li>
-            </ul>
-        </nav>
-    </div>
+          </li>
+        <% else %>
+          <li class="btn-group nav-item">
+            <li>
+              <%= link_to signup_path do %>
+                <i class="fa fa-user-plus" aria-hidden="true"></i><%= t(".signup") %>
+              <% end %>
+            </li>
+          </li>
+          <li class="btn-group nav-item">
+            <li>
+              <%= link_to login_path do %>
+                <i class="fa fa-sign-in" aria-hidden="true"></i><%= t(".login") %>
+              <% end %>
+            </li>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
 </div>
 </header>

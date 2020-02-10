@@ -29,6 +29,7 @@ vi:
       title_logo: "CoWorking Space"
       signup: "Đăng ký"
       login: "Đăng nhập"
+      logout: "Đăng xuất"
     footer:
       title_about: "Về chúng tôi"
       title_contact: "Liên hệ: "
@@ -38,6 +39,14 @@ vi:
     user_notexist: "Tài khoản không tồn tại"
     create_success: "Chào mừng đến với ứng dụng"
     create_fail: "Đăng ký thất bại"
+    btn_create: "Đăng ký tài khoản"
     new:
       title: "Đăng ký"
-      btn_create: "Đăng ký tài khoản"
+  sessions:
+    login_success: "Đăng nhập thành công"
+    login_fail: "Đăng nhập thất bại"
+    new:
+      title: "Đăng nhập"
+      btn_login: "Đăng nhập"
+      new_user: "Thành viên mới?"
+      sign_up: "Đăng ký ngay"
