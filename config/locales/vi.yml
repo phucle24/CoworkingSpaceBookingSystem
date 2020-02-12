@@ -47,6 +47,7 @@ vi:
     btn_create: "Đăng ký tài khoản"
     check_mail: "Kiểm tra mail để kích hoạt tài khoản"
     update_success: "Cập nhật thành công"
+    cant_update: "Bạn không thể cập nhật tài khoản người khác"
     new:
       title: "Đăng ký"
       btn_create: "Đăng kí"
@@ -62,12 +63,38 @@ vi:
       new_user: "Thành viên mới?"
       sign_up: "Đăng ký ngay"
       remember_me: "Ghi nhớ"
+      forgot_password: "Quên mật khẩu"
   account_activations:
     account_activated: "Kích hoạt tài khoản thành công"
     invalid_activation: "Kích hoạt không thành công"
   user_mailer:
+    subject_activation: "Kích hoạt tài khoản"
+    subject_reset: "Đặt lại mạt khẩu"
     account_activation:
       subject: "Kích hoạt tài khoản"
       hi_user: "chào bạn %{user}"
       content: "CHào mừng đến với hệ thống đặt phòng làm việc chung, kích vào link bên dưới để kích hoạt tài khoản"
       activated: "kích hoạt"
+      reset_password: "Cập nhật lại mật khẩu"
+    password_reset:
+      subject: "Đặt lại mật khẩu"
+      content_1: "Để tạo lại mật khẩu kích vào link bên dưới"
+      content_2: "Link này sẽ tồn tại trong 2 giờ"
+      content_3: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
+      reset_password: "Cập nhật lại mật khẩu"
+  password_resets:
+    sent_email: "Mail đã gửi cùng với thông tin mật khẩu"
+    email_not_found: "Email không tìm thấy"
+    password_not_empty: "Mật khẩu không được để trống"
+    change_password_success: "Thay đổi mật khẩu thành công"
+    password_expired: "Mật khẩu đã hết hạn"
+    user_notexist: "Người dùng không tồn tại"
+    password_not_empty: "không thể để trống"
+    cant_update: "Bạn không thể cập nhật tài khoản người khác"
+    edit:
+      title: "Cập nhật mật khẩu"
+      btn_update_password: "Cập nhật mật khẩu"
+      confirmation: "Xác nhận"
+    new:
+      title: "Quên mật khẩu"
+      btn_submit: "Gửi"
