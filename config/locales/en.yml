@@ -16,18 +16,27 @@ en:
       signup: "Sign up"
       login: "Login"
       logout: "logout"
+      title_profile: "Profile"
+      title_setting: "Setting"
+      title_account: "Account"
     footer:
       title_about: "About"
       title_contact: "Contact: "
-  share:
-    error_messages: "The form contains error"
+  shared:
+    error_messages:
+      content_error: "The form contains %{error} error"
   users:
     user_notexist: "User does not exist"
     create_success: Welcome to the App!"
     create_fail: "Sign up failed"
     btn_create: "Create my account"
+    update_success: "Update success"
     new:
       title: "Signup"
+      btn_create: "Submit"
+    edit:
+      title: "Edit Profile"
+      btn_edit: "Save changes"
   sessions:
     login_success: "Login success"
     login_fail: "Login Fail"
