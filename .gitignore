@@ -37,3 +37,6 @@ config/environments/*.local.yml
 /.vscode
 /.idea
 /config/database.yml
+
+# Ignore application configuration
+/config/application.yml

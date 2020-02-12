@@ -27,9 +27,10 @@ en:
       content_error: "The form contains %{error} error"
   users:
     user_notexist: "User does not exist"
-    create_success: Welcome to the App!"
+    create_success: "Welcome to the App!"
     create_fail: "Sign up failed"
     btn_create: "Create my account"
+    check_mail: "Please check your email to activate your account."
     update_success: "Update success"
     new:
       title: "Signup"
@@ -38,11 +39,20 @@ en:
       title: "Edit Profile"
       btn_edit: "Save changes"
   sessions:
-    login_success: "Login success"
-    login_fail: "Login Fail"
+    login_fail: "Invalid email/password combination"
+    account_not_activate: "Account not activated. Check your email for the activation link."
     new:
       title: "Login"
       btn_login: "Login"
       new_user: "New user?"
       sign_up: "Signup"
       remember_me: "Remeber me"
+  account_activations:
+    account_activated: "Account activated!"
+    invalid_activation: "Invalid activation link"
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+      hi_user: "HI %{user}"
+      content: "Welcome to the CoWorking system! Click on the link below to activate your account:"
+      activated: "Activated"

@@ -14,6 +14,7 @@ vi:
         invalid: "không đúng định dạng"
         too_short: "quá ngắn"
         not_a_number: "không phải số"
+        taken: "Đã tồn tại"
   title: "Hệ thống đặt phòng làm việc chung"
   static_pages:
     home:
@@ -44,6 +45,7 @@ vi:
     create_success: "Chào mừng đến với ứng dụng"
     create_fail: "Đăng ký thất bại"
     btn_create: "Đăng ký tài khoản"
+    check_mail: "Kiểm tra mail để kích hoạt tài khoản"
     update_success: "Cập nhật thành công"
     new:
       title: "Đăng ký"
@@ -52,11 +54,20 @@ vi:
       title: "Chỉnh sửa thông tin"
       btn_edit: "Lưu thay đổi"
   sessions:
-    login_success: "Đăng nhập thành công"
-    login_fail: "Đăng nhập thất bại"
+    login_fail: "Sai tên đăng nhập hoặc mật khẩu"
+    account_not_activate: "Tài khoản chưa kích hoạt.Kiểm tra email để kích hoạt tài khoản"
     new:
       title: "Đăng nhập"
       btn_login: "Đăng nhập"
       new_user: "Thành viên mới?"
       sign_up: "Đăng ký ngay"
       remember_me: "Ghi nhớ"
+  account_activations:
+    account_activated: "Kích hoạt tài khoản thành công"
+    invalid_activation: "Kích hoạt không thành công"
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+      hi_user: "chào bạn %{user}"
+      content: "CHào mừng đến với hệ thống đặt phòng làm việc chung, kích vào link bên dưới để kích hoạt tài khoản"
+      activated: "kích hoạt"
