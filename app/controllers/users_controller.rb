@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, only: [:show, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
 
   def show
     @user = User.find_by id: params[:id]
@@ -43,6 +44,14 @@ class UsersController < ApplicationController
     return if @user
 
     flash[:alert] = t ".user_notexist"
+    redirect_to root_path
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    return if @user == current_user
+
+    flash[:alert] = t ".cant_update"
     redirect_to root_path
   end
 

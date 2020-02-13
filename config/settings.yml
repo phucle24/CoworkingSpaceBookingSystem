@@ -6,3 +6,4 @@ phone_max: 11
 email_max: 255
 password_min: 6
 remember_me: "1"
+password_expired: 2
