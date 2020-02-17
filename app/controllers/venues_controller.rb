@@ -12,7 +12,7 @@ class VenuesController < ApplicationController
     @venue = current_user.venues.build venue_params
     if @venue.save
       flash[:info] = t ".add_venue_success"
-      redirect_to venues_path
+      redirect_to venue_path @venue
     else
       render :show
     end

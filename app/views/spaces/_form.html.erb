@@ -1,0 +1,95 @@
+<%= form_for(@space) do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="spaces">
+  <div class="col-md-6">
+    <div class="field">
+      <%= f.label :name, t(".name_space") %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :name, t(".capacity") %>
+      <%= f.text_field :capacity, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :name, t(".description") %>
+      <%= f.text_field :description, class: "form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <%= f.label :title, t(".hour_open") %>
+      <div class="form-group">
+        <div class='input-group date' id='datetimepicker1'>
+             <%= f.text_field :hour_open, as: :date_time_picker, class: "form-control" %>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-time"></span>
+            </span>
+        </div>
+    </div>
+  </div>
+    <div class="col-md-3">
+      <%= f.label :title, t(".hour_close") %>
+      <div class='input-group date' id='datetimepicker2'>
+         <%= f.text_field :hour_close, as: :date_time_picker, class: "form-control" %>
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-time"></span>
+        </span>
+      </div>
+    </div>
+    <div class="col-md-6">
+       <div class="dropdown">
+        <%= f.label :venue, t(".venue") %>
+          <%= f.select :venue_id, options_for_select(Venue.all.collect{|u| [t(u[:name]), {class: "dropdown-menu show"}, u[:id]]}), {} %>
+      </div>
+    </div>
+    <div class="col-md-6">
+       <div class="dropdown">
+        <%= f.label :type, t(".type_spaces") %>
+        <%= f.select :type_id, options_for_select(Type.all.collect{|u| [t(u[:name]), {class: "dropdown-menu show"}, u[:id]]}), {} %>
+      </div>
+    </div>
+  </div>
+  <div class="field col-md-6">
+      <%= f.label :image, t(".image") %>
+         <%= f.file_field :picture %>
+    </div>
+  </div>
+  <br>
+   <div class="col-md-6">
+        <%= f.label :title, t(".price") %>
+        <%= f.fields_for :price do |price| %>
+          <div>
+            <%= price.label :per_month, t(".per_month") %>
+            <%= price.text_field :per_month, class: "form-control" %>
+          </div>
+          <div>
+            <%= price.label :per_day, t(".per_day") %>
+            <%= price.text_field :per_day, class: "form-control" %>
+          </div>
+          <div>
+            <%= price.label :per_hour, t(".per_hour") %>
+            <%= price.text_field :per_hour, class: "form-control" %>
+          </div>
+        <% end %>
+
+      </div>
+  <div class="col-md-12">
+      <%= f.submit yield(:button_text), class: "btn btn-primary right" %>
+  </div>
+    </div>
+  </div>
+<% end %>
+  <script type="text/javascript">
+          $(function () {
+              $('#datetimepicker1').datetimepicker({
+                  format: 'LT'
+              });
+          });
+  </script>
+  <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker2').datetimepicker({
+                format: 'LT'
+            });
+        });
+  </script>

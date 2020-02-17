@@ -70,14 +70,6 @@ ActiveRecord::Schema.define(version: 2020_02_16_123218) do
     t.index ["space_id"], name: "index_prices_on_space_id"
   end
 
-  create_table "space_prices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.decimal "per_month", precision: 10
-    t.decimal "per_day", precision: 10
-    t.decimal "per_hour", precision: 10
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "spaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "capacity"
@@ -91,23 +83,15 @@ ActiveRecord::Schema.define(version: 2020_02_16_123218) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "venue_id"
-    t.bigint "manager_id"
+    t.bigint "user_id"
     t.bigint "type_id"
-    t.bigint "space_prices_id"
-    t.index ["manager_id"], name: "index_spaces_on_manager_id"
-    t.index ["space_prices_id"], name: "index_spaces_on_space_prices_id"
     t.index ["type_id"], name: "index_spaces_on_type_id"
+    t.index ["user_id"], name: "index_spaces_on_user_id"
     t.index ["venue_id"], name: "index_spaces_on_venue_id"
   end
 
   create_table "types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "user_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -123,10 +107,9 @@ ActiveRecord::Schema.define(version: 2020_02_16_123218) do
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"
+    t.integer "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_role_id"
-    t.index ["user_role_id"], name: "index_users_on_user_role_id"
   end
 
   create_table "venues", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -145,10 +128,8 @@ ActiveRecord::Schema.define(version: 2020_02_16_123218) do
   add_foreign_key "booking_details", "users"
   add_foreign_key "messages", "users"
   add_foreign_key "prices", "spaces"
-  add_foreign_key "spaces", "space_prices", column: "space_prices_id"
   add_foreign_key "spaces", "types"
-  add_foreign_key "spaces", "users", column: "manager_id"
+  add_foreign_key "spaces", "users"
   add_foreign_key "spaces", "venues"
-  add_foreign_key "users", "user_roles"
   add_foreign_key "venues", "users"
 end

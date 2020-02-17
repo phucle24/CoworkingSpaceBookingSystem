@@ -3,8 +3,13 @@
 # { "name": "Westminster Abbey", "latitude": "51.499581", "longitude": "-0.127309"},
 # { "name": "Big Ben", "latitude": "51.500792", "longitude": "-0.124613"}
 # ])
-Amenity.create!([
-{ "name": "Wifi"},
-{ "name": "Tivi"},
-{ "name": "Máy chiếu"}
+# Amenity.create!([
+# { "name": "Wifi"},
+# { "name": "Tivi"},
+# { "name": "Máy chiếu"}
+# ])
+Type.create!([
+{ "name": "Meeting space"},
+{ "name": "Private space"},
+{ "name": "Desk space"}
 ])

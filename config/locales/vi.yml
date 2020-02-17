@@ -115,3 +115,26 @@ vi:
       btn_edit_venue: "Chỉnh sửa"
     index:
       all_spaces: "Spaces của bạn"
+  spaces:
+    update_space_success: "Cập nhật Venue thành công"
+    space_notexist: "Venue không tồn tại"
+    form:
+      add_space: "Tạo mới Space"
+      name_space: "Tên Space"
+      capacity: "Không gian Space"
+      description: "Mô tả"
+      hour_open: "Giờ mở của"
+      hour_close: "Giờ đóng của"
+      type_spaces: "Loại Spaces"
+      image: "Hình ảnh"
+      create_space: "Tạo"
+      price: "Giá"
+      per_month: "Giá tháng"
+      per_day: "Giá ngày"
+      per_hour: "Giá giờ"
+    new:
+      title: "Taọ mới Space"
+      btn_create_space: "Tạo mới"
+    edit:
+      title: "Chỉnh sửa Space"
+      btn_edit_space: "Chỉnh sửa"

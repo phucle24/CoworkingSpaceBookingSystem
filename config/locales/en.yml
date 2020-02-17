@@ -104,3 +104,26 @@ en:
       add_amenity: "Add amenity"
     index:
       all_spaces: "All Spaces of User"
+  spaces:
+    update_space_success: "Update Venue Success"
+    space_notexist: "Venue not exist"
+    form:
+      add_space: "Create Space"
+      name_space: "Name"
+      capacity: "Number people of Space"
+      description: "Description"
+      hour_open: "Hour Open"
+      hour_close: "Hour Close"
+      type_space: "Type of Space"
+      image: "Image"
+      create_space: "Create"
+      price: "Price"
+      per_month: "Per Month"
+      per_day: "Per Day"
+      per_hour: "Per Hour"
+    new:
+      title: "Creat Space"
+      btn_create_space: "Create"
+    edit:
+      title: "Edit Space"
+      btn_edit_space: "Edit Space"
