@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_02_16_123218) do
   create_table "booking_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "time_use_start"
     t.datetime "time_use_close"
-    t.boolean "status"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "space_id"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2020_02_16_123218) do
 
   create_table "payments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "method"
-    t.boolean "status"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2020_02_16_123218) do
     t.time "hour_close"
     t.string "time_use_start"
     t.string "time_use_close"
-    t.boolean "status"
+    t.integer "status"
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -114,7 +114,7 @@ ActiveRecord::Schema.define(version: 2020_02_16_123218) do
 
   create_table "venues", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.boolean "status", default: false, null: false
+    t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"

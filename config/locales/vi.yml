@@ -34,6 +34,12 @@ vi:
       title_profile: "Thông tin cá nhân"
       title_setting: "Chỉnh sửa"
       title_account: "Tài khoản"
+      title_user: "Người dùng"
+      title_venue: "Venue"
+      title_booking: "Booking"
+      title_space: "Space"
+      title_payment: "Thanh toán"
+      title_quanlycanhan: "Quản lý cá nhân"
     footer:
       title_about: "Về chúng tôi"
       title_contact: "Liên hệ: "
@@ -114,7 +120,11 @@ vi:
       title: "Chỉnh sửa Venue"
       btn_edit_venue: "Chỉnh sửa"
     index:
-      all_spaces: "Spaces của bạn"
+      title: "Venue của bạn"
+    venue_row:
+      deleted: "Xóa Venue sẽ xóa các thông tin liên quan. Bạn chắc chắn xóa nó không ?"
+    show:
+      deleted: "Xóa Venue sẽ xóa các thông tin liên quan. Bạn chắc chắn xóa nó không ?"
   spaces:
     update_space_success: "Cập nhật Venue thành công"
     space_notexist: "Venue không tồn tại"

@@ -7,6 +7,8 @@
       <th scope="col"><%= t ".city" %></th>
       <th scope="col"><%= t ".amenities" %></th>
       <th scope="col"><%= t ".status" %></th>
+      <th scope="col"><%= t ".edit" %></th>
+      <th scope="col"><%= t ".delete" %></th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +23,8 @@
       <% end %>
       </td>
       <td><%= @venue.status %></td>
+      <td class = "text-center"><%= link_to t("edit"), edit_venue_path %></td>
+      <td class = "text-center"><%= link_to t("delete"), @venue, method: :delete, data: { confirm: t(".deleted") } %></td>
     </tr>
   </tbody>
 </table>

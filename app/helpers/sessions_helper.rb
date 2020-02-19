@@ -33,6 +33,18 @@ module SessionsHelper
     end
   end
 
+  def moderator_account?
+    !current_user.nil? && current_user.role == "moderator"
+  end
+
+  def admin_account?
+    !current_user.nil? && current_user.role == "admin"
+  end
+
+  def user_account?
+    !current_user.nil? && current_user.role == "user"
+  end
+
   def logged_in?
     current_user.present?
   end

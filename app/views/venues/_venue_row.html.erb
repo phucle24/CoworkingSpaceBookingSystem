@@ -1,0 +1,10 @@
+<tr>
+  <td class = "text-left"><%= venue_row_counter +=1 %></td>
+  <td class = "text-left"><%= venue_row.id %></td>
+  <td class = "text-left"><%= venue_row.name %></td>
+  <td class = "text-left"><%= venue_row.address.name %></td>
+  <td class = "text-left"><%= venue_row.address.city %></td>
+  <th class = "text-left"><%= venue_row.status %></th>
+  <td class = "text-left"><%= link_to t(".delete"), venue_row, method: :delete, data: { confirm: t(".deleted") } %></td>
+  <td class = "text-left"><%= link_to t(".edit"), edit_venue_path(venue_row) %></td>
+</tr>

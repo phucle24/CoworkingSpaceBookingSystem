@@ -1,6 +1,6 @@
 class VenuesController < ApplicationController
-  before_action :corret_user, only: :destroy
-  before_action :load_venue, only: [:show, :edit, :update]
+  before_action :corret_venue, only: :destroy
+  before_action :load_venue, only: [:show, :edit, :update, :destroy]
 
   def new
     @venue = current_user.venues.build
@@ -18,7 +18,10 @@ class VenuesController < ApplicationController
     end
   end
 
-  def index; end
+  def index
+    @venue_rows = current_user.venues.joins(:address)
+    @venue_amenity = Amenity.joins(:venue)
+  end
 
   def show; end
 
@@ -31,6 +34,12 @@ class VenuesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @venue.destroy
+    flash[:success] = "Venue deleted"
+    redirect_to venues_path
   end
 
   private
@@ -49,8 +58,8 @@ class VenuesController < ApplicationController
     redirect_to root_path
   end
 
-  def corret_user
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
+  def corret_venue
+    @venue = current_user.venues.find_by(id: params[:id])
+    redirect_to root_url if @venue.nil?
   end
 end

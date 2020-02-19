@@ -19,6 +19,13 @@ en:
       title_profile: "Profile"
       title_setting: "Setting"
       title_account: "Account"
+      title_quanly: "Manager"
+      title_user: "Users"
+      title_venue: "Venue"
+      title_booking: "Booking"
+      title_space: "Space"
+      title_payment: "Payment"
+      title_quanlycanhan: "Personal Management"
     footer:
       title_about: "About"
       title_contact: "Contact: "
@@ -99,11 +106,14 @@ en:
       title: "Edit Venue"
       btn_edit_venue: "Edit"
     index:
-      title: "Venue"
+      title: "Venue of You"
     amenity_fields:
       add_amenity: "Add amenity"
-    index:
-      all_spaces: "All Spaces of User"
+    venue_row:
+      deleted: "Deleting Venue will delete related information. Are you sure you delete it?"
+    show:
+      deleted: "Deleting Venue will delete related information. Are you sure you delete it?"
+      title_venue: "Venue of You"
   spaces:
     update_space_success: "Update Venue Success"
     space_notexist: "Venue not exist"

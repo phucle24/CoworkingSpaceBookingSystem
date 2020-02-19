@@ -29,6 +29,31 @@
           </li>
         </li>
         <% if logged_in? %>
+          <% if admin_account? || moderator_account?  %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <%= t(".title_quanly") %> <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to t(".title_user"), users_url %></li>
+                <li><%= link_to t(".title_venue") %></li>
+                <li><%= link_to t(".title_booking") %></li>
+              </ul>
+            </li>
+          <% end %>
+          <% if user_account? %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <%= t(".title_quanlycanhan") %> <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to t(".title_venue"), venues_url %></li>
+                <li><%= link_to t(".title_space"), spaces_url %></li>
+                <li><%= link_to t(".title_booking") %></li>
+                <li><%= link_to t(".title_payment") %></li>
+              </ul>
+            </li>
+          <% end %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= t(".title_account") %> <b class="caret"></b>

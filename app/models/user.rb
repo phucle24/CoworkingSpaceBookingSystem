@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  enum role: {admin: 1, user: 0, moderator: 2}
   has_many :venues, dependent: :destroy
   has_many :spaces, dependent: :destroy
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
