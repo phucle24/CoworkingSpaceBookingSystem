@@ -146,4 +146,6 @@ en:
       title: "Space of You"
     space_row:
       deleted: "Deleting Space will delete related information. Are you sure you delete it?"
-
+  manager_venues:
+    index:
+      title: "Manager Venues"

@@ -37,7 +37,8 @@ class SpacesController < ApplicationController
   private
 
   def space_params
-    params.require(:space).permit :name, :description, :capacity, :hour_open, :hour_close, :status, :picture,
+    params.require(:space).permit :name, :description, :capacity, :hour_open, :hour_close, :status,
+                                  :picture,
                                   :type_id,
                                   :venue_id,
                                   price_attributes: [:id, :per_month, :per_day, :per_hour]

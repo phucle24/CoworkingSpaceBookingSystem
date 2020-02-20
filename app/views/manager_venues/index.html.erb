@@ -1,0 +1,16 @@
+<h1><%= t ".title" %></h1>
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"><%= t ".number" %></th>
+      <th scope="col"><%= t ".ID" %></th>
+      <th scope="col"><%= t ".name" %></th>
+      <th scope="col"><%= t ".street" %></th>
+      <th scope="col"><%= t ".city" %></th>
+      <th scope="col"><%= t ".status" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "manager_venue", collection: @venues %>
+  </tbody>
+</table>

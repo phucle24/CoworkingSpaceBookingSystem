@@ -8,7 +8,10 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+    get "admin/venues", to: "manager_venues#index"
+    get "admin/venues/edit", to: "manager_venues#edit"
     resources :venues
+    resources :manager_venues
     resources :spaces
     resources :password_resets, only: [:new, :create, :edit, :update]
     resources :users

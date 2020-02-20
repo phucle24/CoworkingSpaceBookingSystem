@@ -1,0 +1,9 @@
+<tr>
+  <td class = "text-left"><%= manager_venue_counter +=1 %></td>
+  <td class = "text-left"><%= manager_venue.id %></td>
+  <td class = "text-left"><%= manager_venue.name %></td>
+  <td class = "text-left"><%= manager_venue.address.name %></td>
+  <td class = "text-left"><%= manager_venue.address.city %></td>
+  <th class = "text-left"><%= manager_venue.status %></th>
+  <td class = "text-left"><%= link_to t(".edit"), edit_manager_venue_path(manager_venue) %></td>
+</tr>

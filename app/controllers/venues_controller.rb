@@ -1,4 +1,5 @@
 class VenuesController < ApplicationController
+  before_action :admin_account, only: [:update]
   before_action :corret_venue, only: :destroy
   before_action :load_venue, only: [:show, :edit, :update, :destroy]
 
