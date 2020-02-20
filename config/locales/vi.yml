@@ -142,9 +142,12 @@ vi:
       per_month: "Giá tháng"
       per_day: "Giá ngày"
       per_hour: "Giá giờ"
+      venue_id: "Venue"
     new:
       title: "Taọ mới Space"
       btn_create_space: "Tạo mới"
     edit:
       title: "Chỉnh sửa Space"
       btn_edit_space: "Chỉnh sửa"
+    index:
+      title: "Space của bạn"

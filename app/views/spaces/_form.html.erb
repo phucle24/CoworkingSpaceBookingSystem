@@ -36,7 +36,7 @@
         </span>
       </div>
     </div>
-    <div class="col-md-6">
+   <div class="col-md-6">
        <div class="dropdown">
         <%= f.label :venue, t(".venue") %>
           <%= f.select :venue_id, options_for_select(Venue.all.collect{|u| [t(u[:name]), {class: "dropdown-menu show"}, u[:id]]}), {} %>

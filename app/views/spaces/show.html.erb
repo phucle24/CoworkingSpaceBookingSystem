@@ -1,10 +1,10 @@
 <div class="row">
   <aside class="col-md-6">
-      <div class="card" style="width: 20rem;">
+      <div class="card" style="width: 100rem;">
         <img class="card-img-top" <%= image_tag @space.picture.url if @space.picture? %>
         <div class="card-body">
-          <h5 class="card-title"><%= @space.name %></h5>
-          <p class="card-text"><%= @space.description %></p>
+          <h5 class="card-title"><%= t ".name_space" %><%= @space.name %></h5>
+          <p class="card-text"><%= t ".description" %><%= @space.description %></p>
           <a class="btn btn-primary" <%= link_to t(".edit"), edit_space_path %></a>
         </div>
       </div>

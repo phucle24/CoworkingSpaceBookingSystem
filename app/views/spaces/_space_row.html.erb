@@ -1,0 +1,14 @@
+<tr>
+  <td class = "text-left"><%= space_row_counter +=1 %></td>
+  <td class = "text-left"><%= space_row.id %></td>
+  <td class = "text-left"><%= link_to space_row.name, space_path(space_row) %></td>
+  <td class = "text-left"><%= space_row.description %></td>
+  <td class = "text-left"><%= space_row.capacity %></td>
+  <td class = "text-left"><%= space_row.price.per_hour %></td>
+  <td class = "text-left"><%= space_row.price.per_day %></td>
+  <td class = "text-left"><%= space_row.price.per_month %></td>
+  <th class = "text-left"><%= space_row.venue.name %></th>
+  <th class = "text-left"><%= space_row.status %></th>
+  <td class = "text-left"><%= link_to t(".delete"), space_row, method: :delete, data: { confirm: t(".deleted") } %></td>
+  <td class = "text-left"><%= link_to t(".edit"), edit_space_path(space_row) %></td>
+</tr>

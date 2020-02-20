@@ -121,7 +121,7 @@ en:
       add_space: "Create Space"
       name_space: "Name"
       capacity: "Number people of Space"
-      description: "Description"
+      description: "Description: "
       hour_open: "Hour Open"
       hour_close: "Hour Close"
       type_space: "Type of Space"
@@ -131,9 +131,19 @@ en:
       per_month: "Per Month"
       per_day: "Per Day"
       per_hour: "Per Hour"
+      venue_id: "Venue"
     new:
       title: "Creat Space"
       btn_create_space: "Create"
     edit:
       title: "Edit Space"
       btn_edit_space: "Edit Space"
+    show:
+      name_space: "Name:"
+      description: "Description: "
+      deleted: "Deleting Space will delete related information. Are you sure you delete it?"
+    index:
+      title: "Space of You"
+    space_row:
+      deleted: "Deleting Space will delete related information. Are you sure you delete it?"
+

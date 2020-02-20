@@ -17,6 +17,10 @@ class SpacesController < ApplicationController
     end
   end
 
+  def index
+    @space_rows = current_user.spaces
+  end
+
   def show; end
 
   def edit; end
@@ -33,7 +37,7 @@ class SpacesController < ApplicationController
   private
 
   def space_params
-    params.require(:space).permit :name, :description, :hour_open, :hour_close, :status, :picture, :picture,
+    params.require(:space).permit :name, :description, :capacity, :hour_open, :hour_close, :status, :picture,
                                   :type_id,
                                   :venue_id,
                                   price_attributes: [:id, :per_month, :per_day, :per_hour]
